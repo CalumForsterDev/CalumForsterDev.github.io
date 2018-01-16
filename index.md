@@ -1,3 +1,7 @@
+---
+title: Calum's Pages
+---
+
 # Home Page
 
 _This is a work in progress_

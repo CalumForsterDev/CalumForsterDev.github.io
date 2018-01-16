@@ -1,5 +1,11 @@
 ---
 title: Calum's Pages
+
+navigation:
+  {% for post in site.posts %}
+    - name: "{{ post.title }}"
+      link: "{{ post.url }}"
+  {% endfor %}
 ---
 
 # Home Page

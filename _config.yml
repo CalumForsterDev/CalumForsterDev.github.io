@@ -1,1 +1,6 @@
 theme: jekyll-theme-cayman
+
+project:
+  name: "Calum's Pages"
+  tagline: "Work in progress"
+  github: "https://github.com/calum"

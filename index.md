@@ -2,10 +2,8 @@
 title: Calum's Pages
 
 navigation:
-  {% for post in site.posts %}
-    - name: "{{ post.title }}"
-      link: "{{ post.url }}"
-  {% endfor %}
+  - name: "Example"
+    link: "/2018/01/16/example.html"
 ---
 
 # Home Page

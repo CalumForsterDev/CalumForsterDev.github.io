@@ -1,6 +1,3 @@
 theme: jekyll-theme-cayman
-
-project:
-  name: "Calum's Pages"
-  tagline: "Work in progress"
-  github: "https://github.com/calum"
+title: Calum
+description: This is where a description goes.

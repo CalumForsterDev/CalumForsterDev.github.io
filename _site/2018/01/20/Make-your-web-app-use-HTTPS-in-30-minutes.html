@@ -22,7 +22,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="/assets/css/style.css?v=05ef51d273ac651930ca670affefd96a220bb010">
+    <link rel="stylesheet" href="/assets/css/style.css?v=938c74e773a84fbd424399926a827e8ffb4f4421">
   </head>
   <body>
     <section class="page-header">
@@ -96,7 +96,7 @@ nginx version: nginx/1.6.3
 }
 </code></pre></div></div>
 
-<p>After changing the configuration file you need to restart NGINX. This if you are using Ubuntu, this is <code class="highlighter-rouge">$ sudo service nginx restart</code>. If you are having problems with NGINX, then take a look at their <a href="http://nginx.org/en/docs/beginners_guide.html">beginner guide</a>.</p>
+<p>After changing the configuration file you need to restart NGINX. If you are using Ubuntu, this is <code class="highlighter-rouge">$ sudo service nginx restart</code>. If you are having problems with NGINX, then take a look at their <a href="http://nginx.org/en/docs/beginners_guide.html">beginner guide</a>.</p>
 
 <h2 id="use-certbot-to-generate-certificates">Use certbot to generate certificates</h2>
 <p>Now for the fun part. You want to use <a href="https://certbot.eff.org/">certbot</a> to setup your Let’s Encrypt certificates. Certbot will also update your NGINX configuration file to use HTTPS instead of HTTP!</p>
@@ -105,7 +105,7 @@ nginx version: nginx/1.6.3
 
 <p>Go to <a href="https://certbot.eff.org/">certbot’s website</a> and select <code class="highlighter-rouge">I'm using Nginx on ...</code> and your operating system. If you are using amazon web services then you can select <code class="highlighter-rouge">Other UNIX</code>.</p>
 
-<p>Certbot will then give you the commands to run. While you run the scripts, certbot will ask you questions to help you with your configuration. Make sure that when it asks about updating your NGINX config file for you that you select <code class="highlighter-rouge">yes</code> - it makes the process slightly easier.</p>
+<p>Certbot will then give you the commands to run. While you run the scripts, certbot will ask you questions to help you with your configuration. When certbot asks about updating your NGINX config file for you, make sure you select <code class="highlighter-rouge">yes</code> - it makes the process slightly easier.</p>
 
 <p>And you’re done! Test it out by going to <code class="highlighter-rouge">https://yourdomain.cf</code>. Your web application is now running encrypted! <img src="/assets/Lock.svg" alt="" /></p>
 

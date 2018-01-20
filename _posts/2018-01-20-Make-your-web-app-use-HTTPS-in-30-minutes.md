@@ -66,7 +66,7 @@ server {
 }
 ```
 
-After changing the configuration file you need to restart NGINX. This if you are using Ubuntu, this is `$ sudo service nginx restart`. If you are having problems with NGINX, then take a look at their [beginner guide](http://nginx.org/en/docs/beginners_guide.html).
+After changing the configuration file you need to restart NGINX. If you are using Ubuntu, this is `$ sudo service nginx restart`. If you are having problems with NGINX, then take a look at their [beginner guide](http://nginx.org/en/docs/beginners_guide.html).
 
 ## Use certbot to generate certificates
 Now for the fun part. You want to use [certbot](https://certbot.eff.org/) to setup your Let's Encrypt certificates. Certbot will also update your NGINX configuration file to use HTTPS instead of HTTP!
@@ -75,7 +75,7 @@ Now for the fun part. You want to use [certbot](https://certbot.eff.org/) to set
 
 Go to [certbot's website](https://certbot.eff.org/) and select `I'm using Nginx on ...` and your operating system. If you are using amazon web services then you can select `Other UNIX`.
 
-Certbot will then give you the commands to run. While you run the scripts, certbot will ask you questions to help you with your configuration. Make sure that when it asks about updating your NGINX config file for you that you select `yes` - it makes the process slightly easier.
+Certbot will then give you the commands to run. While you run the scripts, certbot will ask you questions to help you with your configuration. When certbot asks about updating your NGINX config file for you, make sure you select `yes` - it makes the process slightly easier.
 
 And you're done! Test it out by going to `https://yourdomain.cf`. Your web application is now running encrypted! ![](/assets/Lock.svg)
 

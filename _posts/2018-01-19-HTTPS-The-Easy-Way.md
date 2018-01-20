@@ -1,12 +1,16 @@
-# HTTPS the easy way (with SSL/TLS offloading) ![](../assets/Lock.svg)
+---
+title: HTTPS the easy way (with SSL/TLS offloading)
+---
+
+# HTTPS the easy way (with SSL/TLS offloading) ![](/assets/Lock.svg)
 If you're making an application for the web then you already know that you should be using HTTPS. If you're trying to add the encryption into your application then you're making life harder then it has to be. **Why wouldn't you just do SSL/TLS offloading and leave your application alone?**
 
-_This article is to convince you why offloading is the best practise. For practical guide on how to setup HTTPS with your web application see my other post: [Make your web app use HTTPS in 30 minutes with Let's Encrypt and NGINX](/2018/01/20/Make-your-web-app-use-HTTPS-in-30-minutes)._
+_This article is to convince you why offloading is the best practise. For a practical guide on how to setup HTTPS with your web application see my other post: [Make your web app use HTTPS in 30 minutes with Let's Encrypt and NGINX](/2018/01/20/Make-your-web-app-use-HTTPS-in-30-minutes)._
 
 ## Offloading encryption to a proxy
 SSL/TLS offloading means having a proxy server between the client and your applciation. The proxy server is responsible for handling all the encryption/decryption and forwards everything on to your applications.
 
-![](../assets/encryption_offloading.png)
+![](/assets/encryption_offloading.png)
 
 ## Benefits
 
@@ -31,7 +35,7 @@ For your application to be listening for HTTP (port 80) or HTTPS (port 443) it w
 
 Having something like nginx in front of your applications gives you a whole lot more then just the HTTPS. You also get load balancing, content cache, and monitorring. These are the added bonuses of using a proxy.
 
-![](../assets/encryption_offloading_other.png)
+![](/assets/encryption_offloading_other.png)
 
 ## Not convinced?
 Raise an [issue on my GitHub page](https://github.com/calum/calum.github.io/issues) with any questions you have.

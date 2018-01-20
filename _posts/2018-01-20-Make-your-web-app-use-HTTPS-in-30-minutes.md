@@ -1,11 +1,15 @@
+---
+title: Make your web app use HTTPS in 30 minutes with Let's Encrypt and NGINX
+---
+
 # Make your web app use HTTPS in 30 minutes with Let's Encrypt and NGINX
 <img src="https://letsencrypt.org/images/letsencrypt-logo-horizontal.svg" width="30%"/>
 
 So you have an application which works over HTTP and you want to switch to HTTPS. You can do it for free with Let's Encrypt and NGINX. It should only take about 30 minutes...
 
-  - [ ] Register a free domain name (if you don't already have one) `10 minutes`
-  - [ ] Setup your NGINX proxy `10 minutes`
-  - [ ] Use certbot to generate certificates `10 minutes`
+  1. Register a free domain name (if you don't already have one) `10 minutes`
+  2. Setup your NGINX proxy `10 minutes`
+  3. Use certbot to generate certificates `10 minutes`
 
 ## Register a free domain name (if you don't already have one)
 You need to have a domain name to use HTTPS. If you don't already have one, you can register one for free at [dot.tk](http://www.dot.tk/).
@@ -73,7 +77,7 @@ Go to [certbot's website](https://certbot.eff.org/) and select `I'm using Nginx 
 
 Certbot will then give you the commands to run. While you run the scripts, certbot will ask you questions to help you with your configuration. Make sure that when it asks about updating your NGINX config file for you that you select `yes` - it makes the process slightly easier.
 
-And you're done! Test it out by going to `https://yourdomain.cf`. Your web application is now running encrypted! ![](../assets/Lock.svg)
+And you're done! Test it out by going to `https://yourdomain.cf`. Your web application is now running encrypted! ![](/assets/Lock.svg)
 
 
 [Home](/)

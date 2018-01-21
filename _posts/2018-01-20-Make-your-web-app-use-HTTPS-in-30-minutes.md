@@ -8,7 +8,7 @@ title: Make your web app use HTTPS in 30 minutes with Let's Encrypt and NGINX
 So you have an application which works over HTTP and you want to switch to HTTPS. You can do it for free with Let's Encrypt and NGINX. It should only take about 30 minutes...
 
   1. Register a free domain name (if you don't already have one) `10 minutes`
-  2. Setup your NGINX proxy `10 minutes`
+  2. Set up your NGINX proxy `10 minutes`
   3. Use certbot to generate certificates `10 minutes`
 
 ## Register a free domain name (if you don't already have one)
@@ -16,7 +16,7 @@ You need to have a domain name to use HTTPS. If you don't already have one, you 
 
 Once you have registered a domain, you need to set up your DNS records for it. If you used [dot.tk](http://www.dot.tk/) then you want to click through `Services -> My Domains -> Manage Domain -> Manage Freenom DNS` and then add a blank record with the `Target` set to be your server's IP address.
 
-## Setup your NGINX proxy
+## Set up your NGINX proxy
 You need to install NGINX onto your server and setup the configuration so that NGINX will forward any traffic onto your application.
 
 <img src="https://avatars0.githubusercontent.com/u/1412239?s=200&v=4" width="20%"/>

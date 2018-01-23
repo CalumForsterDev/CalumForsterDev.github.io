@@ -31,9 +31,9 @@ It can be quite a lot of effort getting everyone on your development team setup 
 Imagine a security flaw is discovered in SSL/TLS and you need to upgrade. Wouldn't it be nice to just update the proxy, instead of having to go through each of your applications and update them in turn?
 
 ### You need to run your application with root privileges
-For your application to be listening for HTTP (port 80) or HTTPS (port 443), it would require root privileges. [It is not a good idea to run your application with root privileges](http://bencane.com/2012/02/20/why-you-should-avoid-running-applications-as-root/) so even if your application is currently working with HTTP, using a proxy to forward the traffic to your application is good practice. With a proxy already in place, changing to use HTTPS is easy. There is no reason to make the changes in all of your applications.
+For your application to be listening for HTTP (port 80) or HTTPS (port 443), it would require root privileges. [It is not a good idea to run your application with root privileges](http://bencane.com/2012/02/20/why-you-should-avoid-running-applications-as-root/) so even if your application is currently working with HTTP, using a proxy to forward the traffic to your application is good practice. There are some tools (such as [authbind](https://en.wikipedia.org/wiki/Authbind)) which will allow your application to listen on ports below 1023 without needing root privileges. However, with a proxy in place, changing to use HTTPS is easy. There is no reason to make the changes in all of your applications.
 
-Having something like [NGINX](https://www.nginx.com/resources/wiki/start/) in front of your applications offers a lot more then just the HTTPS. You also get load balancing, content cache, and monitoring. These are the added bonuses of using a proxy.
+Having something like [NGINX](https://www.nginx.com/resources/wiki/start/) or [HAProxy](http://www.haproxy.org/) in front of your applications offers a lot more then just the HTTPS. You also get load balancing, content cache, and monitoring. These are the added bonuses of using a proxy.
 
 ![](/assets/encryption_offloading_other.png)
 
@@ -41,3 +41,8 @@ Having something like [NGINX](https://www.nginx.com/resources/wiki/start/) in fr
 Raise an [issue on my GitHub page](https://github.com/calum/calum.github.io/issues) with any questions you have.
 
 [Home](/)
+
+### Edit log
+#### 23/01/2018
+Added clarity to `You need to run your application with root privileges` section after recieving [comments](https://github.com/calum/calum.github.io/issues/1) from github user [KillerX](https://github.com/KillerX) who pointed out
+> Binding to port 80 or 443 requires an application to start with elevated privileges but nothing prevents the application from dropping them as soon as the port is bound thus not operating as root. As well as nice tools that help you to never need root privileges in the 1st place.
